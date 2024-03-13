@@ -1,27 +1,30 @@
 import React from 'react'
-import { Button, Checkbox, Label, TextInput } from 'flowbite-react';
+import { Button, Label, TextInput } from 'flowbite-react';
 
 function Login() {
     return (
-        <form className="flex max-w-md flex-col gap-4">
-            <div>
-                <div className="mb-2 block">
-                    <Label htmlFor="email1" value="Your email" />
-                </div>
-                <TextInput id="email1" type="email" placeholder="name@flowbite.com" required />
+        <>
+            <div className='h-screen w-full flex  justify-center items-center'>
+                <form className="flex flex-col bg-blue-600 gap-4 p-4 rounded-lg w-1/2">
+                    <div className='font-bold text-xl'>
+                        Dashboard Login
+                    </div>
+                    <div>
+                        <div className="mb-2 block">
+                            <Label htmlFor="email1" value="Your Email" />
+                        </div>
+                        <TextInput id="email1" type="email" placeholder="Enter your email" required />
+                    </div>
+                    <div>
+                        <div className="mb-2 block">
+                            <Label htmlFor="password1" value="Your Password" />
+                        </div>
+                        <TextInput id="password1" type="password" required />
+                    </div>
+                    <Button type="submit" className='bg-white text-blue-600 hover:bg-white'>Submit</Button>
+                </form>
             </div>
-            <div>
-                <div className="mb-2 block">
-                    <Label htmlFor="password1" value="Your password" />
-                </div>
-                <TextInput id="password1" type="password" required />
-            </div>
-            <div className="flex items-center gap-2">
-                <Checkbox id="remember" />
-                <Label htmlFor="remember">Remember me</Label>
-            </div>
-            <Button type="submit">Submit</Button>
-        </form>
+        </>
     )
 }
 

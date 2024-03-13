@@ -1,10 +1,10 @@
 
 import './App.css';
-import Dashboard from './layout/Dashboard';
+import Login from './component/Login';
 
 function App() {
   return (
-<Dashboard/>
+<Login/>
   );
 }
 

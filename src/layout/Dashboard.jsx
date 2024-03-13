@@ -1,6 +1,6 @@
 
 import { Sidebar } from 'flowbite-react';
-import { HiArrowSmRight, HiChartPie, HiInbox, HiShoppingBag} from 'react-icons/hi';
+import { HiArrowSmRight, HiChartPie, HiInbox, HiShoppingBag, } from 'react-icons/hi';
 
 function Dashboard() {
   return (
