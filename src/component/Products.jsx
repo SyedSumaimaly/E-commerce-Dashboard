@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Table } from 'flowbite-react';
+import ProductModal from "./ProductModal";
 
 const tableData = [
     { productName: 'Apple MacBook Pro 17"', color: 'Silver', category: 'Laptop', price: '$2999' },
@@ -8,11 +9,21 @@ const tableData = [
   ];
 
 const Products = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="w-full p-6">
       <div className="flex justify-between w-full">
         <p className="text-2xl font-semibold">Products</p>
-        <button className="p-2 mb-4 bg-blue-700 text-white rounded-lg">
+        <button className="p-2 mb-4 bg-blue-700 text-white rounded-lg" onClick={openModal}>
           Add Product
         </button>
       </div>
@@ -60,6 +71,7 @@ const Products = () => {
           ))}
         </Table.Body>
       </Table>
+      <ProductModal isOpen={isModalOpen} onRequestClose={closeModal} />
     </div>
   );
 };
