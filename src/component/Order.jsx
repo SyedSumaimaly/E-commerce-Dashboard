@@ -5,7 +5,7 @@ function OrderTable() {
     return (
         <div className="overflow-x-auto">
 
-            <h1 className='font-medium p-2'>Order History</h1>
+            <h1 className='text-2xl font-semibold p-2'>Order History</h1>
 
             <Table striped>
                 <Table.Head>

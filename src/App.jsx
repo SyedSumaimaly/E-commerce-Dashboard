@@ -1,21 +1,29 @@
-import { useState } from "react";
 import "./App.css";
-import Login from "./component/Login";
 import DashboardLayout from "./layout/DashboardLayout";
-import { Table } from 'flowbite-react';
-import Users from "./component/Users";
+import Order from "./component/Order"
+import Products from "./component/Products"
+import Login from "./component/Login"
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 
 
 
 function App() {
 
   return (
-    <>
-      {/* <Login /> */}
-      <DashboardLayout>
-        <Users/>
-      </DashboardLayout>
-    </>
+
+
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/order" element={<DashboardLayout><Order /></DashboardLayout>} />
+        <Route path="/products" element={<DashboardLayout><Products /></DashboardLayout>} />
+      </Routes>
+    </BrowserRouter>
+
   );
 }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Label, TextInput } from "flowbite-react";
+import { Label, TextInput } from "flowbite-react";
 
 function Login() {
   return (
@@ -28,7 +28,7 @@ function Login() {
             type="submit"
             className="bg-blue-700 text-white p-2 rounded-lg hover:bg-white hover:text-blue-700"
           >
-            Submit
+            Login
           </button>
         </form>
       </div>

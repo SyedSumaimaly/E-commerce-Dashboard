@@ -12,7 +12,7 @@ const Products = () => {
     <div className="w-full p-6">
       <div className="flex justify-between w-full">
         <p className="text-2xl font-semibold">Products</p>
-        <button className="p-2 bg-blue-700 text-white rounded-lg">
+        <button className="p-2 mb-4 bg-blue-700 text-white rounded-lg">
           Add Product
         </button>
       </div>
@@ -22,6 +22,7 @@ const Products = () => {
           <Table.HeadCell>Color</Table.HeadCell>
           <Table.HeadCell>Category</Table.HeadCell>
           <Table.HeadCell>Price</Table.HeadCell>
+          <Table.HeadCell>Edit</Table.HeadCell>
           <Table.HeadCell>
             <span className="sr-only">Actions</span>
           </Table.HeadCell>

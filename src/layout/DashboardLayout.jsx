@@ -12,48 +12,27 @@ import {
 
 export default function DashboardLayout({ children }) {
   return (
-    <div className="bg-neutral-500 flex">
-      <div>
-      <Sidebar aria-label="Sidebar with content separator example">
-        <Sidebar.Items>
-          <Sidebar.ItemGroup>
-            <Sidebar.Item href="#" icon={HiChartPie}>
-              Dashboard
-            </Sidebar.Item>
-            <Sidebar.Item href="#" icon={HiViewBoards}>
-              Kanban
-            </Sidebar.Item>
-            <Sidebar.Item href="#" icon={HiInbox}>
-              Inbox
-            </Sidebar.Item>
-            <Sidebar.Item href="#" icon={HiUser}>
-              Users
-            </Sidebar.Item>
-            <Sidebar.Item href="#" icon={HiShoppingBag}>
-              Products
-            </Sidebar.Item>
-            <Sidebar.Item href="#" icon={HiArrowSmRight}>
-              Sign In
-            </Sidebar.Item>
-            <Sidebar.Item href="#" icon={HiTable}>
-              Sign Up
-            </Sidebar.Item>
-          </Sidebar.ItemGroup>
-          <Sidebar.ItemGroup>
-            <Sidebar.Item href="#" icon={HiChartPie}>
-              Upgrade to Pro
-            </Sidebar.Item>
-            <Sidebar.Item href="#" icon={HiViewBoards}>
-              Documentation
-            </Sidebar.Item>
-            <Sidebar.Item href="#" icon={BiBuoy}>
-              Help
-            </Sidebar.Item>
-          </Sidebar.ItemGroup>
-        </Sidebar.Items>
-      </Sidebar>
+    <div className=" flex flex-row">
+      <div className="">
+        <Sidebar aria-label="Sidebar with content separator example">
+          <Sidebar.Items >
+            <Sidebar.ItemGroup>
+              <Sidebar.Item href="/order" icon={HiViewBoards}>
+                Order
+              </Sidebar.Item>
+              <Sidebar.Item href="/products" icon={HiInbox}>
+                Products
+              </Sidebar.Item>
+            </Sidebar.ItemGroup>
+            <Sidebar.ItemGroup>
+              <Sidebar.Item href="#" icon={HiTable}>
+                Logout
+              </Sidebar.Item>
+            </Sidebar.ItemGroup>
+          </Sidebar.Items>
+        </Sidebar>
       </div>
-      <div className="w-full p-2">
+      <div className="w-full p-2 bg-blue-300">
         {children}
       </div>
     </div>
